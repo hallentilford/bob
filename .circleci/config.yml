@@ -3,7 +3,7 @@
 version: 2.1
 
 orbs: 
-  test: hallentilford/test@0.0.19
+  test: hallentilford/test@0.0.20
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
@@ -28,4 +28,9 @@ workflows:
     jobs:
       - say-hello:
          post-steps:
-          - test/notify
+          - test/notify:
+              environment_type: testing
+              filters:
+                branches:
+                  only:
+                    - main
