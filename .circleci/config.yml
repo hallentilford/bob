@@ -29,8 +29,4 @@ workflows:
       - say-hello:
          post-steps:
           - test/notify:
-              environment_type: testing
-              filters:
-                branches:
-                  only:
-                    - main
+              environment_type: test
