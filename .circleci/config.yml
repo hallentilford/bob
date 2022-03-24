@@ -30,3 +30,4 @@ workflows:
          post-steps:
           - test/notify:
               environment_type: testing
+              job_type: deployment
