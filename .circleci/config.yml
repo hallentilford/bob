@@ -27,7 +27,7 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello:
-         context: org-global
+         context: hank
          post-steps:
           - test/notify:
               environment_type: testing
