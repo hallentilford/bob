@@ -13,4 +13,4 @@ display:
   home_url: https://nodejs.org/
 
 orbs:
-    jq: circleci/jq@2.2
+  jq: circleci/jq@2.2
