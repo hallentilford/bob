@@ -1,11 +1,11 @@
 ---
 description: |
-    Download and install any version of Node.js. Optionally installs Yarn with a parameter.
-    Recommendation: It is highly recommended to utilize an environment such as 
+    Download and install any version of Node.js. Optionally installs Yarn 
+    Recommendation: It is highly recommended to utilize an environment such
 usage:
     version: 2.1
     orbs:
-        node: circleci/node@x.y # This version number refers to the version of the orb, not the version of Node.js
+        node: circleci/node@x.y # This version number refers to the version 
     jobs:
         install-node-example:
             docker:
@@ -13,7 +13,7 @@ usage:
             steps:
                 - checkout
                 - node/install:
-                      install-yarn: true # Set to true if you would like to install Yarn. NPM comes prepackaged with node
+                      install-yarn: true # Set to true if you would like to 
                       node-version: '16.13' # Specify the node version to install
                 - run: node --version
     workflows:
