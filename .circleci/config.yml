@@ -29,14 +29,6 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello:
-         context: hank
-         post-steps:
-          - test/notify:
-              environment_type: testing
-              job_type: deployment
   lint-pack:
     jobs:
       - orb-tools/lint:
